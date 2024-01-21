@@ -4,35 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css?1" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css?1"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css?1"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css?1"
     />
 
-    <script
+    <!-- <script
       type="module"
-      src="./script/swiper_script.js"
+      src="./script/swiperMainMenu.js?1"
       charset="utf-8"
     ></script>
     <script
       type="module"
-      src="./script/swiperMainmenu_script.js"
+      src="./script/swiperMainVisual.js?1"
       charset="utf-8"
     ></script>
     <script
-    type="module"
-    src="./script/swiperSideMenu.js"
-    charset="utf-8"
-  ></script>
+      type="module"
+      src="./script/swiperSideMenu.js?1"
+      charset="utf-8"
+    ></script> -->
 
     <title>BBpizza</title>
   </head>
@@ -45,77 +45,107 @@
         <div class="container_logo">
           <div class="logo">
             <img src="./images/recipe-pizza-icon.png" alt="" />
-            <h2>BBpizza</h2>
+            <h1>BBpizza</h1>
             <p>-kuramato-</p>
           </div>
         </div>
 
         <div class="container_nav_links">
           <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Concept</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#mainVisual">Home</a></li>
+            <li><a href="#mainSwiper">Main</a></li>
+            <li><a href="#concept">Concept</a></li>
+            <li><a href="#service">Service</a></li>            
+            <li><a href="#contact">Contact</a></li>
             <li>
-              <a href="#">
-                <img src="./images/instagramIcon.svg" alt="" />
+              <a href="#News">
+                <img src="./images/instagramIcon.svg" alt="" style="scale: 2;"/>
               </a>
-            </li>
+            </li>           
           </ul>
         </div>
-        <div class="cotainer_burgar">
-          cotainer_burgar
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="container_burger">          
+          <button class="burger">
+            <span class="btn-icon">
+              <span class="btn-icon-line-1"></span>
+              <span class="btn-icon-line-2"></span>
+            </span>
+            <span class="btn-text">menu</span>
+          </button>
+        </div>
+        <div class="menu">
+          <div class="menu-bg"></div>
+          <div class="menu-container">
+            <div class="menu-contents">
+              <button class="btn-menu-close">
+                <span class="btn-bg"></span>
+                <span class="btn-icon">
+                  <span class="btn-icon-line-1"></span>
+                  <span class="btn-icon-line-2"></span>
+                </span>
+                <span class="btn-text">close</span>
+              </button>
+              <div class="menu-nav">
+                <ul>
+                  <li class="menu-nav-text">
+                    <a href="#mainVisual">Home                    
+                    </a>
+                  </li>
+                  <li class="menu-nav-text">
+                    <a href="#mainSwiper">Main                      
+                    </a>
+                  </li>
+                  <li class="menu-nav-text">
+                    <a href="#concept">Concept                      
+                    </a>
+                  </li>
+                  <li class="menu-nav-text">
+                    <a href="#service">Service                      
+                    </a>
+                  </li>
+                  <li class="menu-nav-text">
+                    <a href="#cotact">Contact                     
+                    </a>
+                  </li>
+                  <li class="menu-nav-text">
+                    <a href="#News">News                      
+                    </a>
+                  </li>                  
+                </ul>
+              </div>            
+            </div>
           </div>
         </div>
       </div>
     </header>
     <!-- main -->
     <main>
-      <!-- topSwiper -->
-      <section id="top_swiper">
-        <div class="swiper topMenu">
-          <div class="swiper-wrapper">
-            <div class="card swiper-slide">
-              <div class="card_image">
-                <img src="./images/pizza4.jpg" alt="" />
-              </div>
-              <div class="card_content">                
-                <h2 class="card_tittle">白い<span>Pizza</span></h2>
-                <p class="card_text">ついに登場！</p>
-              </div>
+      <!-- mainVisualSwiper -->
+      <section class="mainVisual" id="mainVisual">
+        <div class="card-swiper">
+          <div class="card-groups">
+            <div class="card-group" data-index="0" data-status="active">
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="price card"></div>
             </div>
-            <div class="card swiper-slide">
-              <div class="image">
-                <img src="./images/pizza2.jpg" alt="" />
-              </div>
-              <div class="card_content">                
-                <h2 class="card_tittle">黒い<span>Pizza</span></h2>
-                <p class="card_text">ついに登場！</p>
-              </div>
+            <div class="card-group" data-index="1" data-status="deActive">
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="price card"></div>
             </div>
-            <div class="card swiper-slide">
-              <div class="image">
-                <img src="./images/pizza3.jpg" alt="" />
-              </div>
-              <div class="card_content">                
-                <h2 class="card_tittle">青い<span>Pizza</span></h2>
-                <p class="card_text">ついに登場！</p>
-              </div>
+            <div class="card-group" data-index="2" data-status="deActive">
+              <div class="big-card card"></div>
+              <div class="little-card card"></div>
+              <div class="price card"></div>
             </div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <div id="prevBtn" class="swiper-button-prev"></div>
+          <div id="nextBtn" class="swiper-button-next"></div>
         </div>
       </section>
       <!-- mainSwiper -->
-      <section id="mainSwiper">        
+      <section id="mainSwiper">
         <div class="swiper mainMenu">
           <h1>MainMenu</h1>
           <div class="swiper-wrapper">
@@ -124,14 +154,21 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.1</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">Cheese pizza</span>
+                <span class="card_name">チーズピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,700</li>
+                    <li>L side:¥2,400</li>
+                    <li>Monster side:¥3,600</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Cheese pizza</h3>
+                    <p>this is plain on Cheese pizza without Ingredients </p>
+                  </div>
+                </button>                
               </div>
             </div>
             <div class="card swiper-slide">
@@ -139,14 +176,23 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.2</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">Pepperoni pizza</span>
+                <span class="card_name">ぺパロニピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,600</li>
+                    <li>Monster side:¥3,800</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Pepperoni pizza</h3>
+                    <p>Pepaloni uses spices such as chili and paprika
+                      <br>ペパロニは唐辛子やパプリカなどの香辛料を使用します。
+                    </p>
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -154,14 +200,22 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.3</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">Italian Sausage pizza</span>
+                <span class="card_name">ｲﾀﾘｱﾝｿｰｾｰｼﾞﾋﾟｻﾞ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,600</li>
+                    <li>Monster side:¥3,800</li>                     
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Italian Sausage pizza</h3>
+                    <p>Italian Sausage featuring a small meat bundle generously infused with herbs and spices.
+                      <br>ハーブやスパイスのたっぷり入った小さな肉のかたまりを使用しています。</p>
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -169,14 +223,22 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.4</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">2 topping pizza</span>
+                <span class="card_name">ﾊｰﾌﾋﾟｻﾞ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,900</li>
+                    <li>L side:¥2,800</li>
+                    <li>Monster side:¥4,100</li>      
+                  </ul>
+                </div>
+                <button class="card_btn">topping
+                  <div class="intro">
+                    <h3>topping</h3>
+                    <p style="font-size: 15px;">Ham,pepperoni,Italian sausage,bacon,mushroom,onion,green pepper,black olive,pineapple,Jalapeño 
+                    <br>ハム,ぺパロニ,イタリアンソーセージ,ベーコン,マッシュルーム,オニオン,グリーンペッパー,ブラックオリーブ,青とうがらし,パイナップル</p>                    
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -184,14 +246,22 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.5</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">3 topping pizza</span>
+                <span class="card_name">1/3ﾋﾟｻﾞ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥2,000</li>
+                    <li>L side:¥3,000</li>
+                    <li>Monster side:¥4,200</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>topping</h3>
+                    <p style="font-size: 15px;">Ham,pepperoni,Italian sausage,bacon,mushroom,onion,green pepper,black olive,pineapple,Jalapeño 
+                    <br>ハム,ぺパロニ,イタリアンソーセージ,ベーコン,マッシュルーム,オニオン,グリーンペッパー,ブラックオリーブ,青とうがらし,パイナップル</p>                    
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -199,14 +269,21 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.6</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">Bacon pizza</span>
+                <span class="card_name">ベーコンピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,600</li>
+                    <li>Monster side:¥3,800</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Bacon pizza</h3>
+                    <p></p>                    
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -214,14 +291,65 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.7</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">Corn pizza</span>
+                <span class="card_name">コーンピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,600</li>
+                    <li>Monster side:¥3,800</li>                  
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Corn pizza</h3>
+                    <p>on Corn and Onion　コーン,オニオン</p>                    
+                  </div>
+                </button>
+              </div>
+            </div>           
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Pepperoni&Black olive pizza</span>
+                <span class="card_name">ペパロニ&ブラックオリーブピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,700</li>
+                    <li>Monster side:¥4,100</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Pepperoni&Black olive pizza</h3>
+                    <p></p>                    
+                  </div>
+                </button>
+              </div>
+            </div>           
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Hawaiian pizza</span>
+                <span class="card_name">ハワイアンピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,700</li>
+                    <li>Monster side:¥4,100</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Hawaiian pizza</h3>
+                    <p>on Ham,Pineapple,Onion.<br>ハム，パイナップル，玉ねぎ</p>                    
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -229,14 +357,22 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.8</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">Vegetarian pizza</span>
+                <span class="card_name">ベジタリアンピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,700</li>
+                    <li>Monster side:¥4,100</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Vegetarian pizza</h3>
+                    <p>on Mushroom,Onion,Green pepper,Black olive
+                      <br>ﾏｯｼｭﾙｰﾑ，玉ねぎ，ﾋﾟｰﾏﾝ，ﾌﾞﾗｯｸｵﾘｰﾌﾞ</p>                    
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -244,14 +380,22 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.9</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">BBQ chicken pizza</span>
+                <span class="card_name">BBQ チキンピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,700</li>
+                    <li>Monster side:¥4,100</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>BBQ pizza</h3>
+                    <p>on BBQ source，chicken，onion
+                      <br>ﾊﾞｰﾍﾞｷｭｰｿｰｽ，ﾁｷﾝ，玉ねぎ</p>                    
+                  </div>
+                </button>
               </div>
             </div>
             <div class="card swiper-slide">
@@ -259,127 +403,236 @@
                 <img src="./images/l-kv_img.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.10</span>
-                <span class="card_name">meet</span>
-                <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
-                </p>
-                <button class="card_btn">View More</button>
+                <span class="card_tittle">German Potato pizza</span>
+                <span class="card_name">ジャーマンポテトピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥1,800</li>
+                    <li>L side:¥2,700</li>
+                    <li>Monster side:¥4,100</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>German Potato pizza</h3>
+                    <p>on bacon, potato,onion
+                      <br>ベーコン・ポテト・オニオン</p>                    
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Hula chicken pizza</span>
+                <span class="card_name">フラチキン ピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥2,000</li>
+                    <li>L side:¥3,100</li>
+                    <li>Monster side:¥4,600</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Hula chicken pizza</h3>
+                    <p>on smoke chicken，pineapple，onion，Jalapeño，green pepper
+                      <br>ｽﾓｰｸﾁｷﾝ，ﾊﾟｲﾅｯﾌﾟﾙ，玉ねぎ，ﾊﾗﾍﾟｰﾆｮ，ﾋﾟｰﾏﾝ</p>                    
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Mexican pizza</span>
+                <span class="card_name">メキシカン ピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥2,000</li>
+                    <li>L side:¥3,100</li>
+                    <li>Monster side:¥4,600</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Mexican pizza</h3>
+                    <p style="font-size: 15px;">on taco meat，onion，green pepper，Jalapeño，black olive，Mexican spice
+                      <br>タコミート，玉ねぎ，ﾋﾟｰﾏﾝ，ﾊﾗﾍﾟｰﾆｮ，ﾌﾞﾗｯｸｵﾘｰﾌﾞ，ﾒｷｼｶﾝｽﾊﾟｲｽ</p>                    
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Meat Lovers pizza</span>
+                <span class="card_name">ミートラバース チキンピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥2,000</li>
+                    <li>L side:¥3,100</li>
+                    <li>Monster side:¥4,600</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Mexican pizza</h3>
+                    <p>on pepperoni，Ham，bacon，Italian sausage
+                      <br>ﾍﾟﾊﾟﾛﾆ，ﾊﾑ，ﾍﾞｰｺﾝ，ｲﾀﾘｱﾝｿｰｾｰｼﾞ</p>                    
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Chicken Bacon Mix pizza</span>
+                <span class="card_name">チキンベーコンミックスピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥2,000</li>
+                    <li>L side:¥3,000</li>
+                    <li>Monster side:¥4,400</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>CBM pizza</h3>
+                    <p>on chicken，bacon，mushroom
+                      <br>ﾁｷﾝ，ﾍﾞｰｺﾝ，ﾏｯｼｭﾙｰﾑ</p>                    
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card_image">
+                <img src="./images/l-kv_img.png" alt="" />
+              </div>
+              <div class="card_content">
+                <span class="card_tittle">Mix pizza</span>
+                <span class="card_name">ミックスピザ</span>
+                <div class="card_text">
+                  <ul>
+                    <li>M side:¥2,000</li>
+                    <li>L side:¥3,000</li>
+                    <li>Monster side:¥4,400</li>                   
+                  </ul>
+                </div>
+                <button class="card_btn">View More
+                  <div class="intro">
+                    <h3>Mix pizza</h3>
+                    <p>on pepperoni，Italian sausage，green pepper，onion，black olive
+                      <br>ﾍﾟﾊﾟﾛﾆ，ｲﾀﾘｱﾝｿｰｾｰｼﾞ，ﾋﾟｰﾏﾝ，玉ねぎ，ﾌﾞﾗｯｸｵﾘｰﾌﾞ</p>                    
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- sidSwiper -->
-      <section id="sideSwiper">             
+      <section id="sideSwiper">
         <div class="swiper sideMenu">
-          <h1>SideMenu</h1>   
+          <h1>Drink Menu</h1>
           <div class="swiper-wrapper">
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/dessart.jpg" alt="" />
+                <img src="./images/Budweiser.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.1</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Alcohol</span>
+                <span class="card_name">Budweiser</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  330ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥500</button>
               </div>
             </div>
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/susi.jpg" alt="" />
+                <img src="./images/heineken.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.2</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Alcohol</span>
+                <span class="card_name">Heineken</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  330ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥500</button>
               </div>
             </div>
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/poteto.jpg" alt="" />
+                <img src="./images/gingerAle207.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.3</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Alcohol</span>
+                <span class="card_name">Ginger Ale</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  207ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥500</button>
               </div>
             </div>
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/sarada.jpg" alt="" />
+                <img src="./images/drpepper.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.4</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Soft Drink</span>
+                <span class="card_name">Dr Pepper</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  350ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥200</button>
               </div>
             </div>
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/ramen.jpg" alt="" />
+                <img src="./images/gingerAle190.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.5</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Soft Drink</span>
+                <span class="card_name">Ginger Ale</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  190ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥200</button>
               </div>
             </div>
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/sarada2.jpg" alt="" />
+                <img src="./images/cocacola.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.6</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Soft Drink</span>
+                <span class="card_name">Cocacola</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  190ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥200</button>
               </div>
             </div>
             <div class="card swiper-slide">
               <div class="card_image">
-                <img src="./images/tranding-food-1.png" alt="" />
+                <img src="./images/lemonade.png" alt="" />
               </div>
               <div class="card_content">
-                <span class="card_tittle">Ranking No.7</span>
-                <span class="card_name">meet</span>
+                <span class="card_tittle">Soft Drink</span>
+                <span class="card_name">lemonade</span>
                 <p class="card_text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quibusdam, illum fuga? Maiores architecto nulla neque
-                  quibusdam recusandae, ut fuga voluptas.
+                  340ml
                 </p>
-                <!-- <button class="card_btn">View More</button> -->
+                <button class="card_btn">¥200</button>
               </div>
             </div>
           </div>
@@ -387,55 +640,100 @@
       </section>
       <!-- concept -->
       <section id="concept">
-        <h1>Concept</h1>
-        <div class="container">          
-          <div class="content">            
+        <h2>Concept</h2>
+        <div class="container">
+          <div class="content">
             <div class="tittle">
-              くつろげない大人にも<br />Pizzaでおいしいひとときを。
+              <div class="en">Chill<span>and</span>delicious</div>
+              <div class="ja">ゆるく、おいしく
+                <br/>
+                <span>とりあえずPizzaいっとく!</span>
+              </div>             
             </div>
-            <p class="text">
-              楽しい楽しい楽しい楽しい楽しい楽しい
-            </p>
-            <!-- <button class="concept_btn">view more</button> -->
+            <p class="text">気軽に通えるPizza屋
+              </p>
+            
           </div>
           <div class="image">
             <img src="./images/people.jpg" alt="" />
           </div>
         </div>
-      </section>     
-      <!-- service -->
-      <seciton id="service">
-        <h1>Service</h1>
-        <div class="container">          
-          <div class="image">
-            <img src="./images/bbpizza_ourtside.jpg" alt="" />            
-          </div>
-          <ul>
-            <li><p>駐車場：２台</p></li>            
-          </ul>
-        </div>
-      </seciton>
-      <!-- contact -->
-      <section id="contact">
-        <h1>Contact</h1>
-        <div class="container">
-          <div class="context">
-            <div class="phone">
-              <p>080-3530-3602</p>
-            </div>
-            <div class="text">
-              <p>テイクアウトできます<br />その際は、来店前にお電話ください</p>
-            </div>
-          </div>
-          <div class="image">
-            <img src="./images/map.jpg" alt="" />
-            <img src="./images/map.jpg" alt="" />
-          </div>
-        </div>
       </section>
+      <!-- service -->
+      <section id="service">
+        <h2>Service</h2>
+        <div class="container">
+          <div class="image">            
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1705801066980!6m8!1m7!1s37IGX5I72lCK-8znjrO2lA!2m2!1d34.07692220958488!2d134.515960358761!3f352.3519895496463!4f-9.7917911223158!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1705801469434!6m8!1m7!1s77YYGNvuJN-y2PF4nUxl0g!2m2!1d34.07720246891719!2d134.5159265686389!3f73.98969575937804!4f-7.1377397542554775!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="info">
+            <ul class="en">
+              <li><p>Parking Space：2 Available</p>
+                ⓵Go straight through the building and make a right. 
+              <br> ➁there you will find parking spaces that is No.14 and No.15 for two cars.
+              </li>
+              <li><p>Cashless Only Sorry!</p></li>
+              <li><p>Take Out </p> Please call me before you come.
+               <br>I can provide you with the completion time, so you can pick up your order without waiting</li>
+            </ul>
+            <ul class="ja">
+              <li><p>駐車場：2台</p>
+                ⓵建物の間を真っすぐ進んで,右に曲がってください。 
+              <br> ➁No.14とNo.15が駐車場です。
+              </li>
+              <li><p>現金のみの支払いになります。</p></li>
+              <li><p>テイクアウト</p>来店する前に電話をしてください。
+               <br>焼き上がりのお時間をお伝えできますので，お待たせせずにお渡しできます。</li>
+            </ul>
+          </div>
+          
+        </div>
+      </section>   
+      <!-- instagram  -->
+      <section id="News">
+        <h2>News</h2>
+        <div id="instaWrapper">
+          <div id="insta">
+              <ul></ul>
+          </div>
+      </div>
+      </section>
+      <footer id="contact">
+        <h2>Contact</h2>
+        <div class="container">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5091.34399234708!2d134.51319094262539!3d34.07746783024683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355372d7176aa36b%3A0xa06c3c30c62918f3!2sBB%20PIZZA%20KURAMOTO!5e0!3m2!1sja!2sjp!4v1705804271396!5m2!1sja!2sjp" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="nav">
+            <ul>
+              <li class="contact-info">
+                <div>
+                  <p class="heading">BBpizza-kuramoto-</p>
+                  <p class="tell">TEL:080-3530-3602 
+                    <br>weekday平日:16:00〜20:00
+                    <br>Sat,Sun,Holiday土日祝:11:00～20:00 </p>  
+                  <p class="ja">徳島市庄町1丁目19</p>   
+                  <p class="en">1-19, Shomachi, Tokushima-shi, Tokushima, 770-0044, Japan
+                  </p>        
+                </div>
+              </li>            
+            </ul>
+          </div>
+          <p class="copyright">
+            <span
+              >Copyright© BBpizza-kuramoto- All rights
+              Reserved.</span
+            >
+          </p>
+        </div>      
+      </footer>
     </main>
-    <!-- footer -->
-    <footer>footer</footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?1"></script>
+    <script src="./scripts/swiperMainMenu.js?1"></script>
+    <script src="./scripts/swiperSideMenu.js?1"></script>
+    <script src="./scripts/swiperMainVisual.js?1"></script>
+    <script src="./scripts/mainScript.js?1"></script>
   </body>
 </html>

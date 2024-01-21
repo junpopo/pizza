@@ -1,8 +1,98 @@
 @import "variables.scss";
 
-
-.footer_container{
-    width: 100%;
-    height: 100px;
-    background-color: aqua;
+footer{
+    background: #FBC31F;
+    h2{}
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .map{
+            margin-top: 25px;
+            iframe{
+              border-radius: 10%;
+            }
+        }
+        .nav {
+            margin-top: 5px;
+            ul {
+              gap: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: wrap;
+              margin-right: -40px;
+              list-style: none;
+              li {
+                width: 360px;
+                height: 176px;
+                margin-right: 40px;
+                text-align: center;
+                div {
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 30px;
+                  overflow: hidden;
+                  color: #19243c;
+                  font-size: 1.2rem;
+                  line-height: 1.666666666666667;
+                  &::before {
+                    border-color: #efe5de;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: 8px solid #fff;
+                    border-radius: 30px;
+                    overflow: hidden;
+                  }
+                }
+              }
+              .contact-info {
+                div {
+                  color: #19243c;
+                  font-size: 1.2rem;
+                  line-height: 1.666666666666667;
+                  background: #fff;
+                  font-weight: bold;
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  .heading {
+                    margin-bottom: 6px;
+                    
+                  }
+                  .tell{
+                    font-size: 15px;
+                  }
+                  .mail{
+                    font-size: 15px;
+                  }
+                  .jp{font-size: 10px;}
+                  .en{font-size: 10px;}
+                }
+              }            
+             
+            }
+          }
+          .copyright {            
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            // transform: translateX(-50%);          
+            // padding: 10px 16px;
+            // font-size: 1.0rem;
+            // letter-spacing: 0.1em;
+            // color: #fff;
+            // font-family: "Montserrat-Regular", sans-serif;
+            // border-radius: 18px;
+            // margin: 0 auto;
+          }
+    }
+    
 }

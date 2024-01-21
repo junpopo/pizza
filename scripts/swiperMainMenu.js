@@ -1,18 +1,18 @@
-const swiperMainMenu = new Swiper(".mainMenu", {
+const swiper = new Swiper(".mainMenu", {  
   effect: "coverflow",
   grabCursor: true,
-  centeredSlides: true,
+  centeredSlides: false,
   slidesPerView: "auto",
+  initialSlide: 0,
   loop: true,
-  initialSlide: 9,
-  coverflowEffect: {    
+  coverflowEffect: {
     rotate: 0,
     stretch: 0,
     depth: 0,
     modifier: 1,
     slideShadows: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-  },
+  
 });
+
+

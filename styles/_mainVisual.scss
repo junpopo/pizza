@@ -1,0 +1,135 @@
+@import "variables.scss";
+
+.mainVisual {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: start;
+  // background-image: url(../images/eye.jpg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+
+  .swiper-button-prev {
+    height: 50px;
+    width: 50px;
+  }
+  .swiper-button-next {
+    height: 50px;
+    width: 50px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 50px;
+    margin: auto;
+    width: 50px;
+  }
+  /* 前への矢印カスタマイズ */
+  .swiper-button-prev::after {
+    background-image: url(https://junpei-sugiyama.com/wp-content/uploads/2021/02/e0379d76f3f78d80011fc748c93b6cbe.png);
+  }
+  /* 次への矢印カスタマイズ */
+  .swiper-button-next::after {
+    background-image: url(https://junpei-sugiyama.com/wp-content/uploads/2021/02/e1bdcdb129887882c13aaf571f555b16.png);
+  }
+  .card-swiper {
+    .card-groups {
+      width: 100%;
+      .card-group {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        transition: transform 0.4s ease;
+        .card {
+          transition: transform 0.8s cubic-bezier(0.05, 0.43, 0.25, 0.95);
+          background-position: center;
+          background-size: cover;
+        }
+        .big-card {
+          width: 100%;
+          height: 100vh;
+        }
+        .little-card {
+          width: 200px;
+          height: 200px;
+          // left: 50%;
+          // top: 50%;
+          transform: translate(50%, -400%);
+          pointer-events: none;
+        }
+        .price{
+          width: 400px;
+          height: 200px;
+          // left: 50%;
+          // top: 50%;
+          transform: translate(25%, -240%);
+          pointer-events: none;
+        }
+        .big-card {
+          background-image: url(../images/ハワイアンピザ.JPG);
+        }
+        .little-card {
+          background-image: url(../images/mix.png);
+        }
+        .price{
+          background-image: url(../images/price-text1.png);
+        }
+      }
+      .card-group[data-status="deActive"] {
+        transform: scale(0);
+        transition: none;
+      }
+      .card-group[data-status="active"] {
+        transition-delay: 0.3s;
+      }
+      .card-group[data-status="after"] {
+        transform: translateX(50%) scale(0);
+      }
+      .card-group[data-status="before"] {
+        transform: translateX(-50%) scale(0);
+      }
+      .card-group[data-status="becoming-active-from-after"] {
+        transform: translateX(50%) scale(0);
+        transition: none;
+      }
+
+      .card-group[data-status="becoming-active-from-before"] {
+        transform: translateX(-50%) scale(0);
+        transition: none;
+      }
+      .card-group[data-index="1"] {
+        .big-card {
+          background-image: url(../images/ペパロニ&ブラックオリーブピザ.JPEG);
+        }
+        .little-card {
+          background-image: url(../images/mix.png);
+        }
+        .price{
+          background-image: url(../images/price-text1.png);
+        }
+      }
+      .card-group[data-index="2"] {
+        .big-card {
+          background-image: url(../images/pizza3.jpg);
+        }
+        .little-card {
+          background-image: url(../images/mix.png);
+        }
+        .price{
+          background-image: url(../images/price-text1.png);
+        }
+      }
+      &:hover {
+        .little-card {
+          transform: translate(60%, -400%);
+        }
+        .price {
+          transform: translate(15%, -240%);
+        }
+      }
+    }
+  }
+}

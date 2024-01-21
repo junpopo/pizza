@@ -6,28 +6,38 @@
   justify-content: center;
   align-items: center;
   background: map-get($map: $colors, $key: testYellow);
-  h1{
+  h2{
     margin-left: 25px;
   }
-}
-#service .container {
-  display: flex;
-  width: 100%;
-  height: 80%;
- ul{
-  margin-left: 25px;
- }
-}
-#service .container .image {
-  
-  width: 50%;
-  height: 100%;
-  position: relative;
-  left: 25px;
-  img {
+  .container{
+    display: flex;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+    height: 94%;
+   .image{
+    width: 80%;
+    height: 94%;
+    position: relative;
+    left: 25px;
+    iframe {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      border-radius: 20px;
+      position: relative;
+    }
+    
+   }
+   .info{
+    ul{
+      margin-left: 25px;
+      padding: 25px;
+      li{
+        p{
+  
+        }
+      }
+     }
+   }
+   
   }
 }

@@ -1,4 +1,4 @@
-const swiper = new Swiper(".sideMenu", {  
+const sideSwiper = new Swiper(".sideMenu", {  
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: false,

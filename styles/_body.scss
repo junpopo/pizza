@@ -4,7 +4,7 @@ body{
     background-color: map-get($map: $colors, $key: nav);
     font-family: "Poppins", sans-serif;
     overflow: hidden;
-    min-width: 800px;
+    min-width: 375px;
 }
 html{
     overflow:auto;

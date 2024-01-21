@@ -1,18 +1,18 @@
 @import "variables.scss";
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100px;
+  z-index: 2;
   .container_header {
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     .container_logo {
-      // background-color: map-get($colors, test);
-
       .logo {
         display: flex;
         justify-content: center;
@@ -21,10 +21,17 @@ header {
         margin-left: 20px;
         img {
           height: 100px;
+          padding-right: 10px;
+        }
+        h1 {
+          color: #fff;
+        }
+        p {
+          color: #fff;
         }
       }
     }
-
+    
     .container_nav_links {
       height: 100%;
       margin: 0 auto;
@@ -35,30 +42,105 @@ header {
         list-style: none;
         display: flex;
         align-items: center;
+        li {
+          transition: 0.5s;
+          font-size: 20px;
+          font-weight: bold;
+          &:hover {
+            transform: translateY(-10px);
+          }
+        }
 
         li + li {
-            margin-left: 20px;
+          margin-left: 20px;
         }
 
         a {
           color: #fff;
           text-decoration: none;
+          font-weight: bold;
         }
 
-        .img{
-            display: block;
-            width: 40px;
-            height: 40px;
-            // background-color: #fff;
+        .img {
+          display: block;
+          width: 40px;
+          height: 40px;
+          
+          // background-color: #fff;
         }
       }
     }
-
-    
+    .container_burger {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      @media only screen and (min-width: 375px) {
+        max-width: 2560px;
+      }
+      .burger {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: black;
+        .btn-icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 12px;
+          margin: auto;
+          display: inline-block;
+          width: 22px;
+          height: 11px;
+          span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            display: inline-block;
+            content: "";
+            width: 22px;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+          }
+          .btn-icon-line-1 {
+            margin-top: -6px;
+          }
+          .btn-icon-line-2 {
+            margin-top: 3px;
+          }
+        }
+        .btn-text {
+          position: absolute;
+          bottom: 13px;
+          left: 0;
+          color: #fff;
+          width: 114%;
+          font-size: 1rem;
+          line-height: 1;
+          letter-spacing: 0.1em;
+          display: inline-block;
+          transform: scale(0.9);
+          transform-origin: 0 0;
+          font-family: "Montserrat-Medium", sans-serif;
+        }
+      }
+      &:hover {
+        button {
+          transform: scale(1.07);
+        }
+      }
+    }
   }
-  .cotainer_burgar {
-    display: block;        
-    padding-right: 100px;
-}
 }
 
+@media only screen and (max-width: 1190px) {
+  .container_nav_links{
+    display: none;
+  }
+}
