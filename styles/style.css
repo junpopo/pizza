@@ -470,7 +470,7 @@ header .container_header .container_burger:hover button {
 /* font-color */
 #concept {
   width: 100%;
-  height: 30rem;
+  height: 400px;
   background: #FBC31F;
 }
 #concept h2 {
@@ -489,42 +489,45 @@ header .container_header .container_burger:hover button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 37%;
+  width: 37vw;
   height: 90%;
   margin-right: 10px;
   padding: 10px;
 }
 #concept .container .content .tittle {
-  left: 25px;
+  left: 2vw;
 }
 #concept .container .content .tittle .en {
-  font-size: 3.2rem;
+  font-size: 4vw;
   font-weight: bold;
-  padding: 10px;
+  padding: 1vw;
 }
 #concept .container .content .tittle .en span {
-  font-size: 1.2rem;
-  padding: 0 10px;
+  font-size: 3vw;
+  padding: 0 5px;
 }
 #concept .container .content .tittle .jp {
-  font-size: 2.2rem;
-  padding-left: 20px;
+  font-size: 2vw;
+  padding: 1vw;
+  padding-left: 2vw;
 }
 #concept .container .content .tittle .jp span {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 #concept .container .content .text {
-  padding-top: 20px;
-  font-size: 1rem;
+  padding-top: 2vw;
+  font-size: 3vw;
   position: relative;
-  left: 50px;
+  left: 5vw;
   display: inline-block;
 }
 #concept .container .image {
-  width: 60%;
+  width: 50%;
   height: 90%;
   background: #FBC31F;
   margin-top: 20px;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 #concept .container .image img {
   width: 100%;
@@ -555,10 +558,16 @@ header .container_header .container_burger:hover button {
 #service {
   width: 100%;
   height: 40rem;
+  min-height: 610px;
   display: inline-block;
   justify-content: center;
   align-items: center;
   background: #f3e074;
+}
+@media screen and (max-width: 800px) {
+  #service {
+    min-height: 1092px;
+  }
 }
 #service h2 {
   margin-left: 25px;
@@ -568,9 +577,21 @@ header .container_header .container_burger:hover button {
   width: 100%;
   height: 94%;
 }
+@media screen and (max-width: 800px) {
+  #service .container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 94%;
+  }
+}
 #service .container .image {
   width: 80%;
+  max-width: 500px;
   height: 94%;
+  min-height: 400px;
+  max-height: 600px;
   position: relative;
   left: 25px;
 }
@@ -582,14 +603,17 @@ header .container_header .container_burger:hover button {
   border-radius: 20px;
   position: relative;
 }
+#service .container .info {
+  padding-left: 10px;
+}
 #service .container .info ul {
   margin-left: 25px;
-  padding: 25px;
+  padding: 10px;
 }
 /* backgroud-color */
 /* font-color */
 footer {
-  background: #FBC31F;
+  background: #fbc31f;
 }
 footer .container {
   display: flex;
@@ -599,26 +623,32 @@ footer .container {
 }
 footer .container .map {
   margin-top: 25px;
+  position: relative;
+  height: 261px;
+  width: 85%;
+  max-width: 500px;
 }
 footer .container .map iframe {
-  border-radius: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 footer .container .nav {
   margin-top: 5px;
 }
 footer .container .nav ul {
-  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-right: -40px;
   list-style: none;
+  margin-right: 25px;
 }
 footer .container .nav ul li {
   width: 360px;
   height: 176px;
-  margin-right: 40px;
   text-align: center;
 }
 footer .container .nav ul li div {

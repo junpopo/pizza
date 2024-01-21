@@ -2,7 +2,7 @@
 
 #concept {
   width: 100%;
-  height: 30rem;
+  height: 400px;
   background: map-get($map: $colors, $key: mainBG1);
   h2 {
     padding: 10px 0 10px 0;
@@ -14,55 +14,60 @@
     width: 100%;
     height: 100%;
     display: flex;
+    
+    
     .content {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 37%;
+      width: 37vw;
       height: 90%;
       
       margin-right: 10px;
       padding: 10px;
-      .tittle {        
-        left: 25px;        
-        .en{
-          font-size: 3.2rem;
+      .tittle {
+        left: 2vw;
+        .en {
+          font-size: 4vw;
           font-weight: bold;
-          padding: 10px;
-          span{
-            font-size: 1.2rem;
-            padding: 0 10px;
+          padding: 1vw;
+          span {
+            font-size: 3vw;
+            padding: 0 5px;
           }
         }
-        .jp{
-          font-size: 2.2rem;
-          padding-left: 20px;
-          span{
-            font-size: 1.5rem;
+        .jp {
+          font-size: 2vw;
+          padding: 1vw;
+          padding-left: 2vw;
+          span {
+            font-size: 1.5vw;
           }
         }
-        
       }
       .text {
-        padding-top: 20px;
-        font-size: 1rem;
+        padding-top: 2vw;
+        font-size: 3vw;
         position: relative;
-        left: 50px;
+        left: 5vw;
         display: inline-block;
       }
     }
     .image {
-      width: 60%;
+      width: 50%;
       height: 90%;
       background: map-get($map: $colors, $key: mainBG1);
       margin-top: 20px;
+      margin-right: 1vw;
+      margin-left: 1vw;
       img {
         width: 100%;
         height: 100%;
         border-radius: 5%;
         object-fit: cover;
         float: left;
+        
       }
     }
   }
