@@ -24,6 +24,7 @@ html {
   height: 100vh;
   display: grid;
   place-items: start;
+  background-image: url(../);
   /* 前への矢印カスタマイズ */
   /* 次への矢印カスタマイズ */
 }
@@ -84,10 +85,10 @@ html {
   background-image: url(../images/ハワイアンピザ.JPG);
 }
 .mainVisual .card-swiper .card-groups .card-group .little-card {
-  background-image: url(../images/mix.png);
+  background-image: url(../images/takeda.png);
 }
 .mainVisual .card-swiper .card-groups .card-group .price {
-  background-image: url(../images/price-text1.png);
+  background-image: url(../images/Hawaian.png);
 }
 .mainVisual .card-swiper .card-groups .card-group[data-status=deActive] {
   transform: scale(0);
@@ -114,19 +115,19 @@ html {
   background-image: url(../images/ペパロニ&ブラックオリーブピザ.JPEG);
 }
 .mainVisual .card-swiper .card-groups .card-group[data-index="1"] .little-card {
-  background-image: url(../images/mix.png);
+  background-image: url(../images/takeda.png);
 }
 .mainVisual .card-swiper .card-groups .card-group[data-index="1"] .price {
-  background-image: url(../images/price-text1.png);
+  background-image: url(../images/Paparonia.png);
 }
 .mainVisual .card-swiper .card-groups .card-group[data-index="2"] .big-card {
-  background-image: url(../images/pizza3.jpg);
+  background-image: url(../images/cheese.JPEG);
 }
 .mainVisual .card-swiper .card-groups .card-group[data-index="2"] .little-card {
-  background-image: url(../images/mix.png);
+  background-image: url(../images/takeda.png);
 }
 .mainVisual .card-swiper .card-groups .card-group[data-index="2"] .price {
-  background-image: url(../images/price-text1.png);
+  background-image: url(../images/Cheese.png);
 }
 .mainVisual .card-swiper .card-groups:hover .little-card {
   transform: translate(60%, -400%);
@@ -637,6 +638,7 @@ footer .container .map iframe {
 }
 footer .container .nav {
   margin-top: 5px;
+  width: 340px;
 }
 footer .container .nav ul {
   display: flex;
@@ -646,12 +648,12 @@ footer .container .nav ul {
   list-style: none;
   margin-right: 25px;
 }
-footer .container .nav ul li {
+footer .container .nav ul .contact-info {
   width: 360px;
-  height: 176px;
+  height: 190px;
   text-align: center;
 }
-footer .container .nav ul li div {
+footer .container .nav ul .contact-info div {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -664,8 +666,14 @@ footer .container .nav ul li div {
   color: #19243c;
   font-size: 1.2rem;
   line-height: 1.6666666667;
+  color: #19243c;
+  font-size: 1.2rem;
+  line-height: 1.6666666667;
+  background: #fff;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-footer .container .nav ul li div::before {
+footer .container .nav ul .contact-info div::before {
   border-color: #efe5de;
   position: absolute;
   top: 0;
@@ -677,14 +685,6 @@ footer .container .nav ul li div::before {
   border: 8px solid #fff;
   border-radius: 30px;
   overflow: hidden;
-}
-footer .container .nav ul .contact-info div {
-  color: #19243c;
-  font-size: 1.2rem;
-  line-height: 1.6666666667;
-  background: #fff;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 footer .container .nav ul .contact-info div .heading {
   margin-bottom: 6px;
